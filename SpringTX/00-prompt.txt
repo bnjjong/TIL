@@ -3,11 +3,12 @@ Spring Transactional 공부를 하고 싶은데 어떻게 공부를 해야될지
 
 나는 기본적으로 Spring을 이용해서 10여년 개발을 해본 프로그래머임. 주로 kotlin과 java를 이용해서 서버개발을 함.
 
-오늘은 7일차 학습이야.
-주제는 프로그래밍적 트랜잭션 관리
+오늘은 11일차 학습이야.
+주제는 트랜잭션 테스트 전략
 세부 내용은
-- TransactionTemplate 사용법
-- TransactionCallback 예제
+- @Transactional 테스트
+- TestTransaction API 활용
+꼭 세부내용에 국한될 필요는 없을것 같아. 추가로 더 학습해야될 내용이 있다면 너가 제안해줘.
 해당 내용의 정의와 개념 그리고 해당 기능이나 학습해야될 내용에 대한 배경지식도 알려줘.
 필요하면 내부 구현 코드도 공부를 해보고 싶어.
 필요하다면 flow chart 같은 시각적인 도구가 있으면 좋을것 같음. mermaid 사용시 특수문자 처리 잘 해줘.
@@ -17,6 +18,18 @@ Spring Transactional 공부를 하고 싶은데 어떻게 공부를 해야될지
 추가로 예제 코드는 비지니스 즉 도메인이 있는 로직이였으면 좋겠어.
 
 마지막은 요약해서 정리해줘
+
+mermaid example 특수문자의 경우 따움표를 잘 붙여줘.
+```mermaid
+  flowchart LR
+    A([Begin]) --> B["tm1.getTransaction()"]
+    B --> C["tm2.getTransaction()"]
+    C --> D{비즈니스 로직 수행}
+    D --> E["tm2.commit()"]
+    E --> F["tm1.commit()"]
+    D -- "예외 발생" --> G["tm2.rollback()"]
+    G --> H["tm1.rollback()"]
+  ```
 
 ---
 
