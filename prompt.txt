@@ -61,7 +61,7 @@ class OrderServiceTest {
 
 
 ### 내 생각
-여긴 내가 적는 공간
+여긴 내가 적는 공간 (여긴 비워둬)
 
 ## 출처
 [1] image.jpg https://pplx-res.cloudinary.com/image/upload/v1750026627/user_uploads/32004849/83134302-5dbb-471c-9015-5276c3498e07/image.jpg
