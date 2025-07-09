@@ -38,5 +38,9 @@ mermaid example 특수문자의 경우 따움표를 잘 붙여줘.
     G --> H["tm1.rollback()"]
   ```
 
+추가로 마지막에 MarkDownFile 로 저장하기 위해 파일명을 추천해줘.
+아래는 현재 생성된 파일명 예제임.
+D1-Kafka-Learning-Objective.MD 
+D3-Kafka-Architect.MD
 ---
 
