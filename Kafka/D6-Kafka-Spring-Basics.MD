@@ -5,6 +5,11 @@
 * 메시지 수신을 담당하는 `@KafkaListener` 개념 및 내부 동작 원리 이해
 
 ---
+## 환경 정리
+- jdk 21
+- kotlin 1.9.10
+- spring boot 3.5.4
+- gradle 8.5
 
 ## 1. `spring-kafka` 의존성 및 내부 구조
 
@@ -18,15 +23,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter")
 }
 ```
-* Maven
 
-```xml
-<dependency>
-<groupId>org.springframework.kafka</groupId>
-<artifactId>spring-kafka</artifactId>
-<version>2.9.0</version>
-</dependency>
-```
 
 > **구성 요소**
 >
