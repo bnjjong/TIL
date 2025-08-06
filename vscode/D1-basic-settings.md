@@ -2,7 +2,7 @@
 VSCode의 사용자 인터페이스는 효율적인 개발을 위해 6개 주요 영역으로 구성됩니다:[3]
 ![alt text](./images/vscode-frame.png)
 
-### 1. **Activity Bar (활동 표시줄)  **
+### 1. Activity Bar (활동 표시줄)
 - **위치**: 맨 왼쪽
 - **기능**: 다양한 뷰 간 전환 및 컨텍스트별 정보 표시 (예: Git 변경사항 수)
 - **이동 가능**: 오른쪽으로 이동 가능하며, 우클릭으로 위치 변경
@@ -10,7 +10,7 @@ VSCode의 사용자 인터페이스는 효율적인 개발을 위해 6개 주요
     - `⌘⇧E` Explorer
     - `⌃⇧G` Source control
 
-### 2. **Primary Side Bar (기본 사이드바) **
+### 2. Primary Side Bar (기본 사이드바)
 - **위치**: Activity Bar 옆
 - **주요 뷰**: 탐색기(Explorer), 검색, 소스 제어, 실행 및 디버그, 확장 프로그램
 - **단축키**: `⌘B`
@@ -99,7 +99,6 @@ VSCode의 생산성은 단축키 숙련도에 직결됩니다. 아래는 필수 
 ### 설정 접근 방법 3가지
 1. **UI 설정**: `Ctrl+,` / `Cmd+,`로 GUI 설정 화면[11]
 2. **JSON 설정**: Command Palette → "Preferences: Open Settings (JSON)"[12][13]
-3. **키보드 단축키**: `Ctrl+K Ctrl+S`로 단축키 설정 화면[14]
 
 ### 사용자 설정 vs 작업공간 설정
 VSCode는 두 가지 설정 레벨을 제공합니다:[15][16]
@@ -119,7 +118,8 @@ VSCode는 두 가지 설정 레벨을 제공합니다:[15][16]
 **Java 환경 설정**:[17]
 ```json
 {
-  "java.home": "/path/to/java",```"java.compile.nullAnalysis.mode": "```omatic",
+  "java.home": "/path/to/java",
+  "java.compile.nullAnalysis.mode": "automatic",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-17", 
@@ -133,22 +133,28 @@ VSCode는 두 가지 설정 레벨을 제공합니다:[15][16]
 ```json
 {
   "[kotlin]": {
-    "editor.defaultFormatter": "mathiasfrohlich.Kotlin",```  "editor.formatOnSave": true,
+    "editor.defaultFormatter": "mathiasfrohlich.Kotlin",
+    "editor.formatOnSave": true,
     "editor.tabSize": 4
   }
 }
-```
 
+
+
+```
 **Python 환경 설정**:[18]
 ```json
 {
-  "python.defaultInterpreterPath```"./venv/bin/python",```"python.formatting.provider": "black",
+  "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.formatting.provider": "black",
   "[python]": {
-    "editor.formatOnSave": true,```  "editor.codeActionsOnSave": {
-      "source.organizeImports":```ue
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     }
   }
 }
+
 ```
 
 ## Settings Sync으로 환경 동기화
@@ -167,7 +173,8 @@ VSCode 1.48.0부터 내장된 Settings Sync 기능으로 여러 디바이스간 
    - **Replace Local**: 원격 설정으로 덮어쓰기 (주의!)
    - **Accept Remote**: 원격 설정만 사용
 
-## 실습 체크리스트### Day 1: 기본 설정
+## 실습 체크리스트
+### Day 1: 기본 설정
 - [ ] VSCode 설치 및 한국어 언어팩 설치[21][22]
 - [ ] 기본 UI 영역 파악 및 Activity Bar 기능 테스트
 - [ ] Command Palette (`Ctrl+Shift+P`) 활용법 연습
